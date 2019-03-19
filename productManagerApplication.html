@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Manager Application</title>
+    <link rel="stylesheet" >
+</head>
+<body>
+<h3>Add New Product</h3>
+<div>
+    <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
+        <input type="text" id="add_name" placeholder="Enter new product">
+        <input type="submit" value="Add">
+    </form>
+
+</div>
+<h3>Display All Product</h3>
+<table>
+    <tr>
+        <th style="text-align: left">Product Name</th>
+        <th style="text-align: right; color: brown " colspan="2"><p id="counter"></p></th>
+    </tr>
+    <tbody id="products">
+    </tbody>
+</table>
+<script src="main.js"></script>
+<div id="tableEdit" aria-hidden="false">
+    <h3>Edit Product</h3>
+    <div>
+        <form action="javascript:void(0);" method="POST" id="saveEdit">
+            <input type="text" id="edit_name">
+            <input type="submit" value="Edit">
+            <!--<button type="button" onclick="closeTableEdit()">X</button>-->
+            <a onclick="closeTableEdit()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
