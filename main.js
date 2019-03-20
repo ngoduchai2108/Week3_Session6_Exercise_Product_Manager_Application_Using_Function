@@ -40,14 +40,12 @@ var app = new function () {
         let editNameID = document.getElementById('edit_name');
         editNameID.value = this.products[data];
         document.getElementById('tableEdit').style.display = 'block';
-          self = this;
+          let that = this;
         document.getElementById('saveEdit').onsubmit = function () {
             let product = editNameID.value;
             if (product){
-             self.products.splice(data,1,product.trim());
-             console.log(this.products);
-             console.log(self.products);
-             self.display();
+             that.products.splice(data,1,product.trim());
+             that.display();
                 closeTableEdit();
             }
         }

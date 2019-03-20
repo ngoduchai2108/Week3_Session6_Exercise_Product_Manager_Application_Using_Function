@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Manager Application</title>
+
+</head>
+<body>
+<center>
+    <h3>Add New Student</h3>
+    <div>
+        <form action="javascript:void (0)" method="post" onsubmit="app.add()">
+            <input type="text" id="add_name" placeholder="Enter a name student">
+            <input type="text" id="add_birthday" placeholder="Enter a birthday">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    <h3>Display Student</h3>
+    <table>
+        <tr>
+            <th style="text-align: left">Student Name</th>
+            <th style="text-align: right; color: blue " colspan="2"><p id="counter"></p></th>
+        </tr>
+        <tbody id="students">
+
+        </tbody>
+    </table>
+    <script src="mainStudent.js"></script>
+    <div id="tableEdit" hidden>
+        <h3>Edit Student</h3>
+        <form action="javascript:void (0)" method="post" id="saveEdit">
+            <input type="text" id="edit_name">
+            <input type="text" id="edit_birthday">
+            <input type="submit" value="Edit">
+            <button onclick="closeTableEdit()">X</button>
+        </form>
+    </div>
+</center>
+</body>
+</html>
